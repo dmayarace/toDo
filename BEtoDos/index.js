@@ -57,6 +57,21 @@ app.put('/updateOne/:id', async (req, res) => {
     })
 })
 
+//Update a document(task) in your collection. For example task changed to complete
+app.put('/toDo/:id', async (req, res) => {
+    const id = ObjectId(req.params.id)
+    let newTodo = req.body.task
+
+    connToDb(async (collection)=>{
+        const result = await collection.updateOne({_id: id}, {$set: {task: newTodo}})
+        if(result.acknowledged) {
+            res.json({success: true, data: result})
+        } else {
+            res.json({success: false, data: result})
+        }
+    })
+})
+
 
 //add a document to your collection
 app.post('/add', async (req, res) => {
@@ -78,7 +93,7 @@ app.post('/addMany', async (req, res) => {
 app.post('/toDos', async (req, res) => {
     const toDosToAdd = {
         task: req.body.task,
-        status: req.body.status
+        status: 'uncompleted'
     }
     MongoClient.connect(url, {}, async (error, client) => {
         const db = client.db('hyperlynx')
