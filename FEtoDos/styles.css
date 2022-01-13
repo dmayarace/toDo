@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #4c495a;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 60px;
+    text-shadow: 2px 2px rgb(0 0 0 / 20%);
+}
+
+.introImg {
+    text-align: center;
+}
+
+img {
+    width:60%;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 6px 3px 18px 3px rgb(0 0 0 / 20%);
+}
+
+.quote {
+    color: #ffffff;
+    font-size: 30px;
+    font-style: italic;
+}
+
+main {
+    color: #ffffff;
+    text-align: center;
+}
+
+.list {
+    background-color: #776e73;
+    margin: 10px;
+    border-radius: 5px; 
+    padding: 10px;
+}

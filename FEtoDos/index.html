@@ -4,21 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <script defer src="index.js"></script>
+    <link rel="stylesheet" href="styles.css">
     <title>Diana's Bucket List</title>
 </head>
 
 <body>
-<h1>My Bucket List</h1>
-<form id="handleSubmitForm">
-    <p>Got another one! Add it to the list: </p>
-    <input id="newTask" type="text">
-    <input type="submit" value="add task">
-</form>
-</div>
-    <h2>Still to do:</h2>
-        <div id = "uncompletedTasks"></div>
-    <h2>Awesome! You completed it:</h2>
-        <div id = "completedTasks"></div>
+    <h1>My Bucket List</h1>
 
+    <div class="introImg">
+        <img class="paddleImg" src="paddleImg.jpg" alt="paddle boarding at sunset in Bahrain">
+            <p class="quote">“A life lived in fear…. is a life half-lived.” – Baz Luhrmann</p>
+    </div>
+
+    <main>
+        <div class="list">
+            <h2>Still to do:</h2>
+                <div id = "uncompletedTasks"></div>
+
+            <form id="handleSubmitForm">
+                <p>Have another one? Add it to the list: </p>
+                    <input id="newTask" type="text">
+                        <input type="submit" value="add task">
+            </form>
+
+            <h2>Awesome! You completed it:</h2>
+                <div id = "completedTasks"></div>
+        </div>
+    </main>
 </body>
 </html>
